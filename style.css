@@ -1,0 +1,98 @@
+﻿<style>
+        
+        body, h1, h2, h3, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Comfortaa', sans-serif;
+            background-color: #F7F7F7; /* Cloudy Gray */
+            color: #014038; /* Canopy Green for text */
+        }
+
+        .site-header {
+            background-color: #BDD4DA; /* Sky Bloom - lighter for contrast with logo */
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-title img {
+            width: 80px;
+            height: auto;
+        }
+
+        .logo-title h1 {
+            font-size: 30px;
+            font-weight: bold;
+            color: #014038; /* Canopy Green */
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #014038; /* Canopy Green */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #F0C06D; /* Sunlit Petal */
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons i {
+            font-size: 20px;
+            color: #014038; /* Canopy Green */
+            margin: 0 10px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .social-icons i:hover {
+            color: #F0C06D; /* Sunlit Petal */
+        }
+
+        /* Example Main Section */
+        main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #014038;
+        }
+
+        main p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #014038;
+            max-width: 700px;
+            margin: 0 auto 20px auto;
+        }
+
+        footer {
+            background-color: #96BAA0; /* Meadow Mist */
+            color: #014038;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>

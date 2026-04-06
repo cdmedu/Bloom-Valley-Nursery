@@ -1,24 +1,94 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloom Valley Nursery</title>
-</head>
 
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-<header>
-    <h1>Bloom Valley Nursery</h1>
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="gallery.html">Gallery</a> |
-        <a href="about.html">About</a> |
-        <a href="custom.html">Custom</a>
-    </nav>
-</header>
+    <header class="site-header">
+        <div class="logo-title">
+            <img src="images/logo.png" alt="Bloom Valley Nursery Logo">
+            <h1>Bloom Valley Nursery</h1>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        </header>
 
 <main>
     <h2>Personalized Planting Requests</h2>
-    <p>At Bloom Valley Nursery, we believe every garden tells a story, and we’re here to help you create yours. Whether you’re dreaming of a vibrant flower bed, a peaceful green space, or need help choosing the right plants for your home, our team is happy to guide you every step of the way. Simply share your ideas and preferences with us, and we’ll work together to bring your vision to life. We take pride in offering thoughtful, sustainable options that help your garden grow beautifully and thrive for seasons to come.</p>
+    <p>
+        At Bloom Valley Nursery, we believe every garden tells a story, and we’re here to help you create yours.
+        Whether you’re dreaming of a vibrant flower bed, a peaceful green space, or need help choosing the right plants,
+        our team is here to guide you every step of the way.
+    </p>
+
+    <hr>
+
+    <h2>Customer Testimonials</h2>
+    <p>"Bloom Valley helped me transform my backyard into a beautiful garden!" – Lisa H.</p>
+    <p>"Amazing plants and even better customer service. Highly recommend!" – Robert S.</p>
+
+    <hr>
+
+    <h2>Community Involvement</h2>
+    <p>
+        We proudly support our local community by hosting seasonal planting workshops, donating plants to local schools,
+        and participating in neighborhood beautification projects and seminars.
+    </p>
+
+    <hr>
+
+    <h2>Local Events</h2>
+    <ul>
+        <li>Spring Planting Workshop – April 18</li>
+        <li>Look For Insects in the Garden with a Bug Catching Kit (Kid) – April 25</li>
+        <li>Summer Garden Tour – June 13</li>
+        <li>Make You Own Garden Stepping Stone (Kid) – June 20</li>
+        <li>Fall Harvest Festival – October 17</li>
+    </ul>
+
+    <hr>
+
+    <h2>Collaborations</h2>
+    <p>
+        Bloom Valley Nursery partners with local landscapers, garden designers, and community groups to create
+        beautiful outdoor spaces and promote sustainable gardening practices.
+    </p>
+
+    <hr>
+
+    <h2>Get Involved</h2>
+    <p>Interested in collaborating or joining an event? Let us know!</p>
+
+    <form class="contact-form">
+
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" rows="4"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
 </main>
 
 <footer>
@@ -26,16 +96,14 @@
     <p>Contact: bloomvalley@email.com</p>
 
     <div class="social-icons">
-        <a href="https://www.facebook.com" target="_blank">
-            <img src="facebook.png" alt="Facebook">
-        </a>
-        <a href="https://www.instagram.com" target="_blank">
-            <img src="instagram.png" alt="Instagram">
-        </a>
-        <a href="https://www.twitter.com" target="_blank">
-            <img src="twitter.png" alt="Twitter">
-        </a>
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-instagram-square"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-pinterest-square"></i>
     </div>
+
+    <p>&copy; 2026 Bloom Valley Nursery. All rights reserved.</p>
+
 </footer>
 
 </body>

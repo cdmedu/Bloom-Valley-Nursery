@@ -1,24 +1,117 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloom Valley Nursery</title>
-</head>
 
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-<header>
-    <h1>Bloom Valley Nursery</h1>
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="gallery.html">Gallery</a> |
-        <a href="about.html">About</a> |
-        <a href="custom.html">Custom</a>
-    </nav>
-</header>
+    <header class="site-header">
+        <div class="logo-title">
+            <img src="images/logo.png" alt="Bloom Valley Nursery Logo">
+            <h1>Bloom Valley Nursery</h1>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        </header>
 
 <main>
     <h2>About Us/Contact Us</h2>
     <p>Bloom Valley Nursery is a local, family-owned plant nursery dedicated to providing a wide variety of high-quality plants, trees, and gardening supplies. We are passionate about connecting with gardening enthusiasts and homeowners in our community who share a love for horticulture. Our nursery is built on a foundation of sustainability and creativity, and we strive to reflect the natural beauty of our plants in everything we do. Through our growing digital presence, we aim to better serve our community by increasing accessibility, encouraging engagement, and making it easy for customers to explore our offerings, ask questions, and place orders. Whether you’re an experienced gardener or just getting started, Bloom Valley Nursery is here to help you grow.</p>
+
+    <h2>Place an Order</h2>
+<p>Fill out the form below to request plants or gardening supplies.</p>
+
+<form class="order-form">
+
+    <label for="order-name">Full Name:</label><br>
+    <input type="text" id="order-name" name="order-name" required><br><br>
+
+    <label for="order-email">Email:</label><br>
+    <input type="email" id="order-email" name="order-email" required><br><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone"><br><br>
+
+    <label for="product">Select a Product:</label><br>
+    <select id="product" name="product">
+        <option value="aloe">Aloe Plant</option>
+        <option value="apple">Apple Tree</option>
+        <option value="birch">Birch Tree</option>
+        <option value="spider">Spider Plant</option>
+        <option value="pearls">String of Pearls</option>
+        <option value="soil">Potting Soil</option>
+        <option value="watering">Watering Can</option>
+    </select><br><br>
+
+    <label for="quantity">Quantity:</label><br>
+    <input type="number" id="quantity" name="quantity" min="1" value="1"><br><br>
+
+    <label>Order Type:</label><br>
+    <input type="radio" id="pickup" name="order-type" value="pickup" checked>
+    <label for="pickup">Store Pickup</label><br>
+
+    <input type="radio" id="delivery" name="order-type" value="delivery">
+    <label for="delivery">Delivery</label><br><br>
+
+        <label for="instructions">Special Instructions:</label><br>
+    <textarea id="instructions" name="instructions" rows="4"></textarea><br><br>
+
+        <button type="submit">Submit Order</button>
+
+    <h2>About Us/Contact Us</h2>
+    <p>Bloom Valley Nursery is a local, family-owned plant nursery...</p>
+
+    <hr>
+
+    <h2>Customer Feedback & Community Involvement</h2>
+
+    <hr>
+
+    <form class="contact-form">
+
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="type">What would you like to share?</label><br>
+        <select id="type" name="type">
+            <option value="testimonial">Customer Testimonial</option>
+            <option value="feedback">General Feedback</option>
+            <option value="community">Community Event / Collaboration</option>
+        </select><br><br>
+
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <label for="rating">Rate Your Experience (optional):</label><br>
+        <select id="rating" name="rating">
+            <option value="">Select Rating</option>
+            <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+            <option value="4">⭐⭐⭐⭐ Good</option>
+            <option value="3">⭐⭐⭐ Average</option>
+            <option value="2">⭐⭐ Fair</option>
+            <option value="1">⭐ Poor</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
 </main>
 
 <footer>
@@ -26,17 +119,16 @@
     <p>Contact: bloomvalley@email.com | (555) 123-4321</p>
 
     <div class="social-icons">
-        <a href="https://www.facebook.com" target="_blank">
-            <img src="facebook.png" alt="Facebook">
-        </a>
-        <a href="https://www.instagram.com" target="_blank">
-            <img src="instagram.png" alt="Instagram">
-        </a>
-        <a href="https://www.twitter.com" target="_blank">
-            <img src="twitter.png" alt="Twitter">
-        </a>
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-instagram-square"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-pinterest-square"></i>
     </div>
-</footer>
+
+    <p>&copy; 2026 Bloom Valley Nursery. All rights reserved.</p>
+    
+    </footer>
+
 
 </body>
 </html>

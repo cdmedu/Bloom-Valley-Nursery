@@ -8,6 +8,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-grid .product {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f7f7f7;
+        }
+
+        .gallery-grid .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .gallery-grid .product p {
+            margin: 10px 0 5px;
+        }
+
+        .add-to-cart {
+            background-color: #014038; /* Canopy Green */
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .add-to-cart:hover {
+            background-color: #09653a;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery-grid {
+                grid-template-columns: 1fr; /* 1 per row on mobile */
+            }
+        }
+    </style>
 </head>
 
 <body class="gallery">
@@ -30,12 +84,10 @@
     <h2>Photo Exhibit</h2>
     <p>Explore our flora showcase of our most striking botanical images. From seasonal blooms to custom arrangements, these images show what Bloom Valley Nursery has to offer and are sure to inspire your own garden ideas.</p>
 
-    
     <div style="text-align:center; margin-bottom:30px;">
         <button class="add-to-cart" onclick="alert('Viewing cart!')">View Cart</button>
     </div>
 
-    
     <div class="gallery-grid">
 
         <div class="product">

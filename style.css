@@ -217,7 +217,7 @@ body.gallery footer {
 
 body.custom {
     background-color: #96BAA0;
-    color: #014038; /* Canopy Green text */
+    color: #014038;
 }
 
 body.custom .site-header {
@@ -250,26 +250,72 @@ body.custom footer {
 }
 
 
+
 button.add-to-cart {
-    background-color: #F0C06D;
-    color: #014038; /* Canopy Green text */
-    border: 2px solid #014038;
     padding: 12px 25px;
     font-size: 16px;
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
+    transform-origin: center;
 }
 
-button.add-to-cart:hover {
-    background-color: #014038;
-    color: #F0C06D;
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
 
 button.add-to-cart:active {
     transform: scale(0.98);
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+button.add-to-cart:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+body.gallery button.add-to-cart {
+    background-color: #014038;
+    color: #F7F7F7;
+    border: 2px solid #014038;
+}
+
+body.gallery button.add-to-cart:hover {
+    background-color: #F0C06D;
+    color: #014038;
+}
+
+
+body.custom button.add-to-cart {
+    background-color: #F0C06D;
+    color: #014038;
+    border: 2px solid #014038;
+}
+
+body.custom button.add-to-cart:hover {
+    background-color: #96BAA0;
+    color: #014038;
+}
+
+
+body.home button.add-to-cart {
+    background-color: #96BAA0;
+    color: #014038;
+    border: 2px solid #014038;
+}
+
+body.home button.add-to-cart:hover {
+    background-color: #F0C06D;
+    color: #014038;
+}
+
+
+body.about button.add-to-cart {
+    background-color: #BDD4DA;
+    color: #014038;
+    border: 2px solid #014038;
+}
+
+body.about button.add-to-cart:hover {
+    background-color: #F0C06D; /* Sunlit Petal on hover */
+    color: #014038;
 }

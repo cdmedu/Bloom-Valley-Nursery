@@ -7,12 +7,12 @@
 
 body {
     font-family: 'Comfortaa', sans-serif;
-    background-color: #F7F7F7; /* Cloudy Gray */
-    color: #014038; /* Canopy Green for text */
+    background-color: #F7F7F7;
+    color: #014038;
 }
 
 .site-header {
-    background-color: #BDD4DA; /* Sky Bloom */
+    background-color: #BDD4DA;
     padding: 15px 20px;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@ body {
 .logo-title h1 {
     font-size: 30px;
     font-weight: bold;
-    color: #014038; /* Canopy Green */
+    color: #014038;
 }
 
 nav {
@@ -41,7 +41,7 @@ nav {
 }
 
 nav a {
-    color: #014038; /* Canopy Green */
+    color: #014038;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
@@ -49,7 +49,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #F0C06D; /* Sunlit Petal */
+    color: #F0C06D;
 }
 
 .social-icons {
@@ -58,14 +58,14 @@ nav a:hover {
 
 .social-icons i {
     font-size: 20px;
-    color: #014038; /* Canopy Green */
+    color: #014038;
     margin: 0 10px;
     cursor: pointer;
     transition: color 0.3s;
 }
 
 .social-icons i:hover {
-    color: #F0C06D; /* Sunlit Petal */
+    color: #F0C06D;
 }
 
 main {
@@ -88,7 +88,7 @@ main p {
 }
 
 footer {
-    background-color: #96BAA0; /* Meadow Mist */
+    background-color: #96BAA0;
     color: #014038;
     padding: 20px;
     text-align: center;
@@ -97,11 +97,11 @@ footer {
 
 
 body.home {
-    background-color: #F0C06D; /* Sunlit Petal background */
+    background-color: #BDD4DA;
 }
 
 body.home .site-header {
-    background-color: #96BAA0; /* Meadow Mist header */
+    background-color: #96BAA0;
     padding: 30px 20px;
     border-bottom: 4px solid #014038;
 }
@@ -117,7 +117,7 @@ body.home nav a {
 }
 
 body.home nav a:hover {
-    color: #BDD4DA; /* Sky Bloom hover */
+    color: #F0C06D;
 }
 
 body.home main {
@@ -128,7 +128,7 @@ body.home main {
 }
 
 body.home main .hero {
-    background-color: #BDD4DA;
+    background-color: #F7F7F7;
     padding: 60px 40px;
     border-radius: 15px;
     text-align: center;
@@ -153,11 +153,11 @@ body.home footer {
 
 
 body.about {
-    background-color: #BDD4DA; /* Sky Bloom background */
+    background-color: #BDD4DA;
 }
 
 body.about .site-header {
-    background-color: #F7F7F7; /* Cloudy Gray header */
+    background-color: #F7F7F7;
     border-bottom: 2px solid #96BAA0;
 }
 
@@ -179,16 +179,16 @@ body.about main p {
 }
 
 body.about footer {
-    background-color: #F0C06D; /* Sunlit Petal footer */
+    background-color: #F0C06D;
 }
 
 
 body.gallery {
-    background-color: #96BAA0; /* Meadow Mist background */
+    background-color: #96BAA0;
 }
 
 body.gallery .site-header {
-    background-color: #014038; /* Canopy Green header */
+    background-color: #014038;
     color: #F7F7F7;
 }
 
@@ -211,17 +211,17 @@ body.gallery main h2 {
 }
 
 body.gallery footer {
-    background-color: #BDD4DA; /* Sky Bloom footer */
+    background-color: #BDD4DA;
 }
 
 
 body.custom {
-    background-color: #014038; /* Canopy Green background */
-    color: #F7F7F7;
+    background-color: #96BAA0;
+    color: #014038; /* Canopy Green text */
 }
 
 body.custom .site-header {
-    background-color: #F0C06D; /* Sunlit Petal header */
+    background-color: #F0C06D;
     border-bottom: 3px solid #BDD4DA;
 }
 
@@ -234,22 +234,24 @@ body.custom nav a:hover {
 }
 
 body.custom main {
+    background-color: #F7F7F7;
     text-align: left;
     padding: 50px 30px;
+    border-radius: 12px;
 }
 
 body.custom main h2 {
     font-size: 32px;
-    color: #F7F7F7;
+    color: #014038;
 }
 
 body.custom footer {
-    background-color: #96BAA0; /* Meadow Mist footer */
+    background-color: #96BAA0;
 }
 
 
 button.add-to-cart {
-    background-color: #F0C06D; /* Sunlit Petal */
+    background-color: #F0C06D;
     color: #014038; /* Canopy Green text */
     border: 2px solid #014038;
     padding: 12px 25px;
@@ -261,8 +263,8 @@ button.add-to-cart {
 }
 
 button.add-to-cart:hover {
-    background-color: #014038; /* Canopy Green hover */
-    color: #F0C06D; /* Sunlit Petal text */
+    background-color: #014038;
+    color: #F0C06D;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }

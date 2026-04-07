@@ -48,6 +48,25 @@
             background-color: #09653a;
         }
 
+        .cart-buttons {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cart-buttons button {
+            background-color: #014038;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        .cart-buttons button:hover {
+            background-color: #09653a;
+        }
+
         @media (max-width: 992px) {
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -82,8 +101,11 @@
     <h2>Photo Exhibit</h2>
     <p>Explore our flora showcase of our most striking botanical images. From seasonal blooms to custom arrangements, these images show what Bloom Valley Nursery has to offer and are sure to inspire your own garden ideas.</p>
 
-    <div style="text-align:center; margin-bottom:30px;">
-        <button class="add-to-cart" id="viewCartBtn">View Cart</button>
+    <!-- Section for the three placeholder cart buttons -->
+    <div class="cart-buttons">
+        <button id="addCartBtn">Add to Cart</button>
+        <button id="clearCartBtn">Clear Cart</button>
+        <button id="processOrderBtn">Process Order</button>
     </div>
 
     <div class="gallery-grid">
@@ -162,13 +184,13 @@
 </footer>
 
 <script>
-    
+    // Subscribe button alert
     const subscribeBtn = document.getElementById("subscribeBtn");
     subscribeBtn.addEventListener("click", function() {
         alert("Thank you for subscribing.");
     });
 
-    
+    // Add to Cart alert for all product buttons
     const addToCartButtons = document.querySelectorAll(".gallery-grid .add-to-cart");
     addToCartButtons.forEach(function(button) {
         button.addEventListener("click", function() {
@@ -176,10 +198,15 @@
         });
     });
 
-    
-    const viewCartBtn = document.getElementById("viewCartBtn");
-    viewCartBtn.addEventListener("click", function() {
-        alert("Viewing cart!");
+    // Placeholder cart buttons alerts
+    document.getElementById("addCartBtn").addEventListener("click", function() {
+        alert("Item added to the cart.");
+    });
+    document.getElementById("clearCartBtn").addEventListener("click", function() {
+        alert("Cart cleared.");
+    });
+    document.getElementById("processOrderBtn").addEventListener("click", function() {
+        alert("Thank you for your order.");
     });
 </script>
 

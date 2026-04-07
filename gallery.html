@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -36,7 +35,7 @@
             margin: 10px 0 5px;
         }
 
-        .add-to-cart {
+        .add-to-cart, .cart-btn {
             background-color: #014038;
             color: #fff;
             border: none;
@@ -45,11 +44,11 @@
             cursor: pointer;
         }
 
-        .add-to-cart:hover {
+        .add-to-cart:hover, .cart-btn:hover {
             background-color: #09653a;
         }
 
-        /* Responsive Layout */
+        
         @media (max-width: 992px) {
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -84,8 +83,11 @@
     <h2>Photo Exhibit</h2>
     <p>Explore our flora showcase of our most striking botanical images. From seasonal blooms to custom arrangements, these images show what Bloom Valley Nursery has to offer and are sure to inspire your own garden ideas.</p>
 
+    
     <div style="text-align:center; margin-bottom:30px;">
-        <button class="add-to-cart" onclick="alert('Viewing cart!')">View Cart</button>
+        <button id="addCartBtn" class="cart-btn">Add to Cart</button>
+        <button id="clearCartBtn" class="cart-btn">Clear Cart</button>
+        <button id="processOrderBtn" class="cart-btn">Process Order</button>
     </div>
 
     <div class="gallery-grid">
@@ -94,63 +96,63 @@
             <img src="Images/aloe-plant.png" alt="Aloe Plant">
             <p>Aloe Plant</p>
             <p>$19.99</p>
-            <button class="add-to-cart" onclick="alert('Added Aloe Plant to cart!')">Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
 
         <div class="product">
             <img src="Images/apple-tree.png" alt="Apple Tree">
             <p>Apple Tree</p>
             <p>$19.99</p>
-            <button class="add-to-cart" onclick="alert('Added Apple Tree to cart!')">Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
 
         <div class="product">
             <img src="Images/birch-tree.png" alt="Birch Tree">
             <p>Birch Tree</p>
             <p>$19.99</p>
-            <button class="add-to-cart" onclick="alert('Added Birch Tree to cart!')">Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
 
         <div class="product">
             <img src="Images/bird-house.png" alt="Bird House">
             <p>Bird House</p>
             <p>$15.99</p>
-            <button class="add-to-cart" onclick="alert('Added Bird House to cart!')">Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
 
         <div class="product">
             <img src="Images/maple-tree.png" alt="Maple Tree">
             <p>Maple Tree</p>
             <p>$19.99</p>
-            <button class="add-to-cart" onclick="alert('Added Maple Tree to cart!')">Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
 
         <div class="product">
             <img src="Images/potting-soil.png" alt="Potting Soil">
             <p>Potting Soil</p>
             <p>$15.99</p>
-            <button class="add-to-cart" onclick="alert('Added Potting Soil to cart!')">Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
 
         <div class="product">
             <img src="Images/spider-plant.png" alt="Spider Plant">
             <p>Spider Plant</p>
             <p>$15.99</p>
-            <button class="add-to-cart" onclick="alert('Added Spider Plant to cart!')">Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
 
         <div class="product">
             <img src="Images/string-of-pearls.png" alt="String of Pearls">
             <p>String of Pearls</p>
             <p>$19.99</p>
-            <button class="add-to-cart" onclick="alert('Added String of Pearls to cart!')">Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
 
         <div class="product">
             <img src="Images/watering-can.png" alt="Watering Can">
             <p>Watering Can</p>
             <p>$15.99</p>
-            <button class="add-to-cart" onclick="alert('Added Watering Can to cart!')">Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
 
     </div>
@@ -169,15 +171,30 @@
     </div>
 
     <p>&copy; 2026 Bloom Valley Nursery. All rights reserved.</p>
+
+    
+    <button id="subscribeBtn">Subscribe</button>
 </footer>
 
-<button id="subscribeBtn">Subscribe</button>
-</footer>
 
 <script>
+    
     const subscribeBtn = document.getElementById("subscribeBtn");
     subscribeBtn.addEventListener("click", function() {
         alert("Thank you for subscribing.");
+    });
+
+    
+    document.getElementById("addCartBtn").addEventListener("click", function() {
+        alert("Item added to the cart.");
+    });
+
+    document.getElementById("clearCartBtn").addEventListener("click", function() {
+        alert("Cart cleared.");
+    });
+
+    document.getElementById("processOrderBtn").addEventListener("click", function() {
+        alert("Thank you for your order.");
     });
 </script>
 

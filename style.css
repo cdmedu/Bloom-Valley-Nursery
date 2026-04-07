@@ -316,6 +316,21 @@ body.about button.add-to-cart {
 }
 
 body.about button.add-to-cart:hover {
-    background-color: #F0C06D; /* Sunlit Petal on hover */
+    background-color: #F0C06D; 
     color: #014038;
+}
+
+#subscribeBtn {
+    background-color: #014038;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+#subscribeBtn:hover {
+    background-color: #09653a;
 }

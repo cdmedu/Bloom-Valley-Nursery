@@ -32,7 +32,8 @@
     <h2>Place an Order</h2>
     <p>Fill out the form below to request plants or gardening supplies.</p>
 
-    <form class="order-form">
+    
+    <form class="order-form" id="orderForm">
         <label for="order-name">Full Name:</label><br>
         <input type="text" id="order-name" name="order-name" required><br><br>
 
@@ -123,17 +124,19 @@
 </footer>
 
 <script>
-   
+    
     const subscribeBtn = document.getElementById("subscribeBtn");
     subscribeBtn.addEventListener("click", function() {
         alert("Thank you for subscribing.");
     });
 
+    
     const orderForm = document.getElementById("orderForm");
     orderForm.addEventListener("submit", function(event) {
         event.preventDefault();
         alert("Thank you for your order.");
     });
+
     
     const submitBtn = document.getElementById("submitBtn");
     submitBtn.addEventListener("click", function(event) {

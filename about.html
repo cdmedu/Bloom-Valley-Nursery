@@ -47,6 +47,8 @@
             <option value="aloe">Aloe Plant</option>
             <option value="apple">Apple Tree</option>
             <option value="birch">Birch Tree</option>
+            <option value="bird">Bird House</option>
+            <option value="maple">Maple Tree</option>
             <option value="spider">Spider Plant</option>
             <option value="pearls">String of Pearls</option>
             <option value="soil">Potting Soil</option>
@@ -121,16 +123,21 @@
 </footer>
 
 <script>
-    // Subscribe button alert
+   
     const subscribeBtn = document.getElementById("subscribeBtn");
     subscribeBtn.addEventListener("click", function() {
         alert("Thank you for subscribing.");
     });
 
-    // Contact form submit alert
+    const orderForm = document.getElementById("orderForm");
+    orderForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("Thank you for your order.");
+    });
+    
     const submitBtn = document.getElementById("submitBtn");
     submitBtn.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent form from actually submitting
+        event.preventDefault();
         alert("Thank you for your message.");
     });
 </script>

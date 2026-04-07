@@ -184,13 +184,13 @@
 </footer>
 
 <script>
-    // Subscribe button alert
+    
     const subscribeBtn = document.getElementById("subscribeBtn");
     subscribeBtn.addEventListener("click", function() {
         alert("Thank you for subscribing.");
     });
 
-    // Add to Cart alert for all product buttons
+    
     const addToCartButtons = document.querySelectorAll(".gallery-grid .add-to-cart");
     addToCartButtons.forEach(function(button) {
         button.addEventListener("click", function() {
@@ -198,7 +198,7 @@
         });
     });
 
-    // Placeholder cart buttons alerts
+    
     document.getElementById("addCartBtn").addEventListener("click", function() {
         alert("Item added to the cart.");
     });

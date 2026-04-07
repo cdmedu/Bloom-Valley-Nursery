@@ -1,98 +1,273 @@
 ﻿<style>
         
-        body, h1, h2, h3, p, ul {
-            margin: 0;
-            padding: 0;
-        }
+    body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            font-family: 'Comfortaa', sans-serif;
-            background-color: #F7F7F7; /* Cloudy Gray */
-            color: #014038; /* Canopy Green for text */
-        }
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #F7F7F7; /* Cloudy Gray */
+    color: #014038; /* Canopy Green for text */
+}
 
-        .site-header {
-            background-color: #BDD4DA; /* Sky Bloom - lighter for contrast with logo */
-            padding: 15px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+.site-header {
+    background-color: #BDD4DA; /* Sky Bloom */
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        .logo-title {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
-        .logo-title img {
-            width: 80px;
-            height: auto;
-        }
+.logo-title img {
+    width: 80px;
+    height: auto;
+}
 
-        .logo-title h1 {
-            font-size: 30px;
-            font-weight: bold;
-            color: #014038; /* Canopy Green */
-        }
+.logo-title h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #014038; /* Canopy Green */
+}
 
-        nav {
-            margin-top: 10px;
-        }
+nav {
+    margin-top: 10px;
+}
 
-        nav a {
-            color: #014038; /* Canopy Green */
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            font-size: 16px;
-        }
+nav a {
+    color: #014038; /* Canopy Green */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
 
-        nav a:hover {
-            color: #F0C06D; /* Sunlit Petal */
-        }
+nav a:hover {
+    color: #F0C06D; /* Sunlit Petal */
+}
 
-        .social-icons {
-            margin-top: 10px;
-        }
+.social-icons {
+    margin-top: 10px;
+}
 
-        .social-icons i {
-            font-size: 20px;
-            color: #014038; /* Canopy Green */
-            margin: 0 10px;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
+.social-icons i {
+    font-size: 20px;
+    color: #014038; /* Canopy Green */
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
 
-        .social-icons i:hover {
-            color: #F0C06D; /* Sunlit Petal */
-        }
+.social-icons i:hover {
+    color: #F0C06D; /* Sunlit Petal */
+}
 
-        /* Example Main Section */
-        main {
-            padding: 40px 20px;
-            text-align: center;
-        }
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
 
-        main h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #014038;
-        }
+main h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #014038;
+}
 
-        main p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #014038;
-            max-width: 700px;
-            margin: 0 auto 20px auto;
-        }
+main p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #014038;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+}
 
-        footer {
-            background-color: #96BAA0; /* Meadow Mist */
-            color: #014038;
-            padding: 20px;
-            text-align: center;
-            margin-top: 40px;
-        }
-    </style>
+footer {
+    background-color: #96BAA0; /* Meadow Mist */
+    color: #014038;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+body.home {
+    background-color: #F0C06D; /* Sunlit Petal background */
+}
+
+body.home .site-header {
+    background-color: #96BAA0; /* Meadow Mist header */
+    padding: 30px 20px;
+    border-bottom: 4px solid #014038;
+}
+
+body.home .logo-title h1 {
+    font-size: 36px;
+}
+
+body.home nav a {
+    font-size: 18px;
+    margin: 0 20px;
+    color: #014038;
+}
+
+body.home nav a:hover {
+    color: #BDD4DA; /* Sky Bloom hover */
+}
+
+body.home main {
+    text-align: left;
+    padding: 60px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+body.home main .hero {
+    background-color: #BDD4DA;
+    padding: 60px 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+body.home main .hero h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+body.home main .hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+body.home footer {
+    background-color: #BDD4DA;
+    padding: 30px;
+    font-size: 16px;
+}
+
+
+body.about {
+    background-color: #BDD4DA; /* Sky Bloom background */
+}
+
+body.about .site-header {
+    background-color: #F7F7F7; /* Cloudy Gray header */
+    border-bottom: 2px solid #96BAA0;
+}
+
+body.about main {
+    text-align: left;
+    padding: 50px 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+body.about main h2 {
+    font-size: 30px;
+    color: #014038;
+}
+
+body.about main p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+body.about footer {
+    background-color: #F0C06D; /* Sunlit Petal footer */
+}
+
+
+body.gallery {
+    background-color: #96BAA0; /* Meadow Mist background */
+}
+
+body.gallery .site-header {
+    background-color: #014038; /* Canopy Green header */
+    color: #F7F7F7;
+}
+
+body.gallery nav a {
+    color: #F7F7F7;
+}
+
+body.gallery nav a:hover {
+    color: #F0C06D;
+}
+
+body.gallery main {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+body.gallery main h2 {
+    font-size: 32px;
+    color: #F7F7F7;
+}
+
+body.gallery footer {
+    background-color: #BDD4DA; /* Sky Bloom footer */
+}
+
+
+body.custom {
+    background-color: #014038; /* Canopy Green background */
+    color: #F7F7F7;
+}
+
+body.custom .site-header {
+    background-color: #F0C06D; /* Sunlit Petal header */
+    border-bottom: 3px solid #BDD4DA;
+}
+
+body.custom nav a {
+    color: #014038;
+}
+
+body.custom nav a:hover {
+    color: #F7F7F7;
+}
+
+body.custom main {
+    text-align: left;
+    padding: 50px 30px;
+}
+
+body.custom main h2 {
+    font-size: 32px;
+    color: #F7F7F7;
+}
+
+body.custom footer {
+    background-color: #96BAA0; /* Meadow Mist footer */
+}
+
+
+button.add-to-cart {
+    background-color: #F0C06D; /* Sunlit Petal */
+    color: #014038; /* Canopy Green text */
+    border: 2px solid #014038;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.add-to-cart:hover {
+    background-color: #014038; /* Canopy Green hover */
+    color: #F0C06D; /* Sunlit Petal text */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button.add-to-cart:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}

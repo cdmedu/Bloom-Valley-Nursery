@@ -35,7 +35,7 @@
             margin: 10px 0 5px;
         }
 
-        .add-to-cart, .cart-btn {
+        .add-to-cart {
             background-color: #014038;
             color: #fff;
             border: none;
@@ -44,11 +44,10 @@
             cursor: pointer;
         }
 
-        .add-to-cart:hover, .cart-btn:hover {
+        .add-to-cart:hover {
             background-color: #09653a;
         }
 
-        
         @media (max-width: 992px) {
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -83,78 +82,65 @@
     <h2>Photo Exhibit</h2>
     <p>Explore our flora showcase of our most striking botanical images. From seasonal blooms to custom arrangements, these images show what Bloom Valley Nursery has to offer and are sure to inspire your own garden ideas.</p>
 
-    
     <div style="text-align:center; margin-bottom:30px;">
-        <button id="addCartBtn" class="cart-btn">Add to Cart</button>
-        <button id="clearCartBtn" class="cart-btn">Clear Cart</button>
-        <button id="processOrderBtn" class="cart-btn">Process Order</button>
+        <button class="add-to-cart" id="viewCartBtn">View Cart</button>
     </div>
 
     <div class="gallery-grid">
-
         <div class="product">
             <img src="Images/aloe-plant.png" alt="Aloe Plant">
             <p>Aloe Plant</p>
             <p>$19.99</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
-
         <div class="product">
             <img src="Images/apple-tree.png" alt="Apple Tree">
             <p>Apple Tree</p>
             <p>$19.99</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
-
         <div class="product">
             <img src="Images/birch-tree.png" alt="Birch Tree">
             <p>Birch Tree</p>
             <p>$19.99</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
-
         <div class="product">
             <img src="Images/bird-house.png" alt="Bird House">
             <p>Bird House</p>
             <p>$15.99</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
-
         <div class="product">
             <img src="Images/maple-tree.png" alt="Maple Tree">
             <p>Maple Tree</p>
             <p>$19.99</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
-
         <div class="product">
             <img src="Images/potting-soil.png" alt="Potting Soil">
             <p>Potting Soil</p>
             <p>$15.99</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
-
         <div class="product">
             <img src="Images/spider-plant.png" alt="Spider Plant">
             <p>Spider Plant</p>
             <p>$15.99</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
-
         <div class="product">
             <img src="Images/string-of-pearls.png" alt="String of Pearls">
             <p>String of Pearls</p>
             <p>$19.99</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
-
         <div class="product">
             <img src="Images/watering-can.png" alt="Watering Can">
             <p>Watering Can</p>
             <p>$15.99</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
-
     </div>
 
 </main>
@@ -172,10 +158,8 @@
 
     <p>&copy; 2026 Bloom Valley Nursery. All rights reserved.</p>
 
-    
     <button id="subscribeBtn">Subscribe</button>
 </footer>
-
 
 <script>
     
@@ -185,16 +169,17 @@
     });
 
     
-    document.getElementById("addCartBtn").addEventListener("click", function() {
-        alert("Item added to the cart.");
+    const addToCartButtons = document.querySelectorAll(".gallery-grid .add-to-cart");
+    addToCartButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            alert("Item added to the cart.");
+        });
     });
 
-    document.getElementById("clearCartBtn").addEventListener("click", function() {
-        alert("Cart cleared.");
-    });
-
-    document.getElementById("processOrderBtn").addEventListener("click", function() {
-        alert("Thank you for your order.");
+    
+    const viewCartBtn = document.getElementById("viewCartBtn");
+    viewCartBtn.addEventListener("click", function() {
+        alert("Viewing cart!");
     });
 </script>
 

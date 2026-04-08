@@ -67,6 +67,42 @@
             background-color: #09653a;
         }
 
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: black;
+        }
+
         @media (max-width: 992px) {
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -104,6 +140,7 @@
     <!-- Section for the three placeholder cart buttons -->
     <div class="cart-buttons">
         <button id="addCartBtn">Add to Cart</button>
+        <button id="viewCartBtn">View Cart</button>
         <button id="clearCartBtn">Clear Cart</button>
         <button id="processOrderBtn">Process Order</button>
     </div>
@@ -167,6 +204,16 @@
 
 </main>
 
+
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Your Cart</h3>
+        <ul id="cartItems">
+        </ul>
+    </div>
+</div>
+
 <footer>
     <p>Hours: Mon–Fri 9am–6pm | Sat–Sun 10am–5pm</p>
     <p>Contact: bloomvalley@email.com</p>
@@ -184,27 +231,26 @@
 </footer>
 
 <script>
-    // Subscribe Button
+    
     const subscribeBtn = document.getElementById("subscribeBtn");
     subscribeBtn.addEventListener("click", function() {
         alert("Thank you for subscribing.");
     });
 
-    // Add to Cart (each product)
+    
     const addToCartButtons = document.querySelectorAll(".gallery-grid .add-to-cart");
 
     addToCartButtons.forEach(function(button) {
         button.addEventListener("click", function() {
-            alert("Item added to the cart.");
-            // Save product name in sessionStorage
             const product = button.parentElement.querySelector("p").innerText;
             let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
             cart.push(product);
             sessionStorage.setItem("cart", JSON.stringify(cart));
+            alert(product + " added to the cart.");
         });
     });
 
-    // Top buttons
+    
     document.getElementById("addCartBtn").addEventListener("click", function() {
         alert("Item added to the cart.");
     });
@@ -217,6 +263,37 @@
     document.getElementById("processOrderBtn").addEventListener("click", function() {
         alert("Thank you for your order.");
         sessionStorage.removeItem("cart");
+    });
+
+    
+    const cartModal = document.getElementById("cartModal");
+    const viewCartBtn = document.getElementById("viewCartBtn");
+    const closeBtn = document.querySelector(".close-btn");
+    const cartItemsList = document.getElementById("cartItems");
+
+    viewCartBtn.addEventListener("click", function() {
+        cartItemsList.innerHTML = "";
+        const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+        if (cart.length === 0) {
+            cartItemsList.innerHTML = "<li>Your cart is empty.</li>";
+        } else {
+            cart.forEach(function(item) {
+                const li = document.createElement("li");
+                li.textContent = item;
+                cartItemsList.appendChild(li);
+            });
+        }
+        cartModal.style.display = "block";
+    });
+
+    closeBtn.addEventListener("click", function() {
+        cartModal.style.display = "none";
+    });
+
+    window.addEventListener("click", function(event) {
+        if (event.target === cartModal) {
+            cartModal.style.display = "none";
+        }
     });
 </script>
 

@@ -11,9 +11,8 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="custom">
 
-    <body class="custom">
     <header class="site-header">
         <div class="logo-title">
             <img src="Images/logo.png" alt="Bloom Valley Nursery Logo">
@@ -26,8 +25,7 @@
             <a href="about.html">About Us</a>
             <a href="custom.html">Custom</a>
         </nav>
-
-        </header>
+    </header>
 
 <main>
     <h2>Personalized Planting Requests</h2>
@@ -75,7 +73,8 @@
     <h2>Get Involved</h2>
     <p>Interested in collaborating or joining an event? Let us know!</p>
 
-    <form class="contact-form">
+    <!-- Fixed contact form -->
+    <form class="contact-form" id="contactForm">
 
         <label for="name">Full Name:</label><br>
         <input type="text" id="name" name="name"><br><br>
@@ -105,24 +104,24 @@
 
     <p>&copy; 2026 Bloom Valley Nursery. All rights reserved.</p>
 
-</footer>
-
-<button id="subscribeBtn">Subscribe</button>
+    <button id="subscribeBtn">Subscribe</button>
 </footer>
 
 <script>
+    // Subscribe button alert
     const subscribeBtn = document.getElementById("subscribeBtn");
     subscribeBtn.addEventListener("click", function() {
         alert("Thank you for subscribing.");
     });
 
-    const submitBtn = document.getElementById("submitBtn");
-    submitBtn.addEventListener("click", function(event) {
-        event.preventDefault();
+    // Fixed contact form alert
+    const contactForm = document.getElementById("contactForm");
+    contactForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // prevent page reload
         alert("Thank you for your message.");
+        contactForm.reset(); // clear the form fields
     });
-    
 </script>
-        
+
 </body>
 </html>

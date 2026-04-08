@@ -32,7 +32,6 @@
     <h2>Place an Order</h2>
     <p>Fill out the form below to request plants or gardening supplies.</p>
 
-    
     <form class="order-form" id="orderForm">
         <label for="order-name">Full Name:</label><br>
         <input type="text" id="order-name" name="order-name" required><br><br>
@@ -124,20 +123,42 @@
 </footer>
 
 <script>
-    
+    // Subscribe Button
     const subscribeBtn = document.getElementById("subscribeBtn");
     subscribeBtn.addEventListener("click", function() {
         alert("Thank you for subscribing.");
     });
 
-    
+    // Order Form - Save to localStorage
     const orderForm = document.getElementById("orderForm");
     orderForm.addEventListener("submit", function(event) {
         event.preventDefault();
-        alert("Thank you for your order.");
+
+        const name = document.getElementById("order-name").value;
+        const email = document.getElementById("order-email").value;
+        const product = document.getElementById("product").value;
+        const quantity = document.getElementById("quantity").value;
+        const phone = document.getElementById("phone").value;
+        const orderType = document.querySelector('input[name="order-type"]:checked').value;
+        const instructions = document.getElementById("instructions").value;
+
+        const orderData = {
+            name: name,
+            email: email,
+            phone: phone,
+            product: product,
+            quantity: quantity,
+            orderType: orderType,
+            instructions: instructions
+        };
+
+        // Save to localStorage
+        localStorage.setItem("customerOrder", JSON.stringify(orderData));
+
+        alert("Order saved!");
     });
 
-    
+    // Contact Form
     const submitBtn = document.getElementById("submitBtn");
     submitBtn.addEventListener("click", function(event) {
         event.preventDefault();

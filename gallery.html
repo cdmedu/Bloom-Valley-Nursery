@@ -67,7 +67,7 @@
             background-color: #09653a;
         }
 
-        /* Modal styles */
+        
         .modal {
             display: none;
             position: fixed;
@@ -137,9 +137,7 @@
     <h2>Photo Exhibit</h2>
     <p>Explore our flora showcase of our most striking botanical images. From seasonal blooms to custom arrangements, these images show what Bloom Valley Nursery has to offer and are sure to inspire your own garden ideas.</p>
 
-    
     <div class="cart-buttons">
-        <button id="addCartBtn">Add to Cart</button>
         <button id="viewCartBtn">View Cart</button>
         <button id="clearCartBtn">Clear Cart</button>
         <button id="processOrderBtn">Process Order</button>
@@ -204,7 +202,6 @@
 
 </main>
 
-
 <div id="cartModal" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
@@ -231,13 +228,11 @@
 </footer>
 
 <script>
-    
     const subscribeBtn = document.getElementById("subscribeBtn");
     subscribeBtn.addEventListener("click", function() {
         alert("Thank you for subscribing.");
     });
 
-    
     const addToCartButtons = document.querySelectorAll(".gallery-grid .add-to-cart");
 
     addToCartButtons.forEach(function(button) {
@@ -250,11 +245,6 @@
         });
     });
 
-    
-    document.getElementById("addCartBtn").addEventListener("click", function() {
-        alert("Item added to the cart.");
-    });
-
     document.getElementById("clearCartBtn").addEventListener("click", function() {
         alert("Cart cleared.");
         sessionStorage.removeItem("cart");
@@ -265,7 +255,6 @@
         sessionStorage.removeItem("cart");
     });
 
-    
     const cartModal = document.getElementById("cartModal");
     const viewCartBtn = document.getElementById("viewCartBtn");
     const closeBtn = document.querySelector(".close-btn");

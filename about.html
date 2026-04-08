@@ -123,22 +123,22 @@
 </footer>
 
 <script>
-    // Subscribe Button
+    
     const subscribeBtn = document.getElementById("subscribeBtn");
     subscribeBtn.addEventListener("click", function() {
         alert("Thank you for subscribing.");
     });
 
-    // Order Form - Save to localStorage
+    
     const orderForm = document.getElementById("orderForm");
     orderForm.addEventListener("submit", function(event) {
         event.preventDefault();
 
         const name = document.getElementById("order-name").value;
         const email = document.getElementById("order-email").value;
+        const phone = document.getElementById("phone").value;
         const product = document.getElementById("product").value;
         const quantity = document.getElementById("quantity").value;
-        const phone = document.getElementById("phone").value;
         const orderType = document.querySelector('input[name="order-type"]:checked').value;
         const instructions = document.getElementById("instructions").value;
 
@@ -152,17 +152,41 @@
             instructions: instructions
         };
 
-        // Save to localStorage
+        
         localStorage.setItem("customerOrder", JSON.stringify(orderData));
 
-        alert("Order saved!");
+        alert("Thank you for your order! Your information has been saved.");
+
+        
+        orderForm.reset();
     });
 
-    // Contact Form
-    const submitBtn = document.getElementById("submitBtn");
-    submitBtn.addEventListener("click", function(event) {
+    
+    const contactForm = document.getElementById("contactForm");
+    contactForm.addEventListener("submit", function(event) {
         event.preventDefault();
-        alert("Thank you for your message.");
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const type = document.getElementById("type").value;
+        const message = document.getElementById("message").value;
+        const rating = document.getElementById("rating").value;
+
+        const contactData = {
+            name: name,
+            email: email,
+            type: type,
+            message: message,
+            rating: rating
+        };
+
+        
+        localStorage.setItem("contactMessage", JSON.stringify(contactData));
+
+        alert("Thank you for your message! Your information has been saved.");
+
+        
+        contactForm.reset();
     });
 </script>
 

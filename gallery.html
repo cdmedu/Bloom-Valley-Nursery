@@ -184,29 +184,39 @@
 </footer>
 
 <script>
-    
+    // Subscribe Button
     const subscribeBtn = document.getElementById("subscribeBtn");
     subscribeBtn.addEventListener("click", function() {
         alert("Thank you for subscribing.");
     });
 
-    
+    // Add to Cart (each product)
     const addToCartButtons = document.querySelectorAll(".gallery-grid .add-to-cart");
+
     addToCartButtons.forEach(function(button) {
         button.addEventListener("click", function() {
             alert("Item added to the cart.");
+            // Save product name in sessionStorage
+            const product = button.parentElement.querySelector("p").innerText;
+            let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+            cart.push(product);
+            sessionStorage.setItem("cart", JSON.stringify(cart));
         });
     });
 
-    
+    // Top buttons
     document.getElementById("addCartBtn").addEventListener("click", function() {
         alert("Item added to the cart.");
     });
+
     document.getElementById("clearCartBtn").addEventListener("click", function() {
         alert("Cart cleared.");
+        sessionStorage.removeItem("cart");
     });
+
     document.getElementById("processOrderBtn").addEventListener("click", function() {
         alert("Thank you for your order.");
+        sessionStorage.removeItem("cart");
     });
 </script>
 
